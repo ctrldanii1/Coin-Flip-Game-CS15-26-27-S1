@@ -1,28 +1,14 @@
 import random
 
-incorrect_guesses = 0
-
-while incorrect_guesses < 3:
+while True:
     coin = random.choice(["heads", "tails"])
-
-    # Input validation
     while True:
-        guess = input("Guess heads or tails: ").lower()
-
-        if guess == "heads" or guess == "tails":
+        guess = (input("Enter your guess:"))
+        if guess is "Heads" or guess is "Tails":
             break
         else:
-            print("Invalid input. Please enter heads or tails.")
-
-    # Check the guess
+            "Invalid input"
     if guess == coin:
-        print("Ur the boss! The coin landed on", coin)
-        incorrect_guesses = 0
+        "Correct"
     else:
-        incorrect_guesses += 1
-        print("You are wrong, silly goose! The coin landed on", coin)
-
-    print("Incorrect guesses in a row:", incorrect_guesses)
-    print()
-
-print("Game over! You made 3 incorrect guesses in a row.")
+        "Incorrect"
